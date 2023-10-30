@@ -18,7 +18,11 @@ export const renderHeader = () => {
         let tabListItem = new Component(`tabListItem ${element.id}`, 'li');
         tabListItem.parent = document.getElementById(tabList.id);
         tabListItem.build();
-        tabListItem.addText(element.text);
+        let tabListButton = new Component(`tabListBtn ${element.id}`, 'button');
+        tabListButton.parent = document.getElementById(tabListItem.id);
+        tabListButton.build();
+        tabListButton.setClass('tabListButton');
+        tabListButton.addText(element.text);
     });
 
     const reserveButton = new Component('reserveBtn','button');

@@ -10,14 +10,16 @@ export const renderFooter = () => {
     footerList.build();
 
     footerListData.forEach((element) => {
-        const footerListItem = new Component (`footerListItem ${element.id}`,'li');
+        const footerListItem = new Component (`footerListLink ${element.id}`,'li');
         footerListItem.parent = document.getElementById(footerList.id);
         footerListItem.build();
-        const footerListLink = new Component ('footerListLink', 'a');
+        const footerListLink = new Component (`footerListLink ${element.id}`, 'a');
         footerListLink.parent = document.getElementById(footerListItem.id);
         footerListLink.build();
-        footerListLink.addText(element.text);
+        footerListLink.setClass('footerListLink');
         footerListLink.setUrl(element.href);
+        footerListLink.addText(element.text);
+        
     });
 
     const copyright = new Component ('copyright', 'div');
