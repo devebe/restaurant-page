@@ -1,10 +1,18 @@
 export const restaurantName = 'Restaurant Nacho';
 
 export const tabListData = [];
-tabListData[0] = 'Menu';
-tabListData[1] = 'Events';
-tabListData[2] = 'Contact';
-tabListData[3] = 'Careers';
+tabListData[0] = {
+    id: 1,
+    text: 'Menu',
+};
+tabListData[1] = {
+    id: 2,
+    text: 'Events',
+};
+tabListData[2] = {
+    id: 3,
+    text: 'Contact',
+};
 
 export const footerListData = [];
 footerListData[0] = {
