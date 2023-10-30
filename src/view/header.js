@@ -15,10 +15,10 @@ export const renderHeader = () => {
     tabList.build();
 
     tabListData.forEach((element) => {
-        let tabListItem = new Component('tabListItem', 'li');
+        let tabListItem = new Component(`tabListItem ${element.id}`, 'li');
         tabListItem.parent = document.getElementById('tabList');
         tabListItem.build();
-        tabListItem.addText(element);
+        tabListItem.addText(element.text);
     });
 
     const reserveButton = new Component('reserveBtn','button');
