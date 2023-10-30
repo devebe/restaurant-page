@@ -13,11 +13,10 @@ export const renderFooter = () => {
         const footerListItem = new Component (`footerListItem ${element.id}`,'li');
         footerListItem.parent = document.getElementById(footerList.id);
         footerListItem.build();
-        const footerListLink = new Component (`footerListLink`, 'a');
+        const footerListLink = new Component ('footerListLink', 'a');
         footerListLink.parent = document.getElementById(footerListItem.id);
         footerListLink.build();
         footerListLink.addText(element.text);
-        footerListLink.setClass(footerListLink.name);
         footerListLink.setUrl(element.href);
     });
 
