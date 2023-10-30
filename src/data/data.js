@@ -27,3 +27,5 @@ footerListData[3] = {
     text: 'Cookie settings',
     href: '#',
 };
+
+export const copyrightText = '© ' + new Date().getFullYear() + ' ' + restaurantName +'. All rights reserved'
