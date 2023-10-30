@@ -6,23 +6,23 @@ export const renderHeader = () => {
     header.build();
 
     const logo = new Component('logo','div');
-    logo.parent = document.getElementById('header');
+    logo.parent = document.getElementById(header.id);
     logo.build();
     logo.addText(restaurantName);
 
     const tabList = new Component('tabList','ul');
-    tabList.parent = document.getElementById('header');
+    tabList.parent = document.getElementById(header.id);
     tabList.build();
 
     tabListData.forEach((element) => {
         let tabListItem = new Component(`tabListItem ${element.id}`, 'li');
-        tabListItem.parent = document.getElementById('tabList');
+        tabListItem.parent = document.getElementById(tabList.id);
         tabListItem.build();
         tabListItem.addText(element.text);
     });
 
     const reserveButton = new Component('reserveBtn','button');
-    reserveButton.parent = document.getElementById('header');
+    reserveButton.parent = document.getElementById(header.id);
     reserveButton.build();
     reserveButton.addText('Reserve a table');
 };
