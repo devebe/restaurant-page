@@ -15,4 +15,12 @@ export default class Component {
     addText(text) {
         this.child.textContent = text;
     };
+
+    setClass(name) {
+        this.child.setAttribute('class',name);
+    };
+
+    setUrl(url) {
+        this.child.setAttribute('href', url);
+    }
 }; 

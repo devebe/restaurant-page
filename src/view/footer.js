@@ -5,21 +5,24 @@ export const renderFooter = () => {
     const footer = new Component('footer','div');
     footer.build();
 
-    const footerList = new Component('footerList', 'div');
-    footerList.parent = document.getElementById('footer');
+    const footerList = new Component('footerList', 'ul');
+    footerList.parent = document.getElementById(footer.id);
     footerList.build();
 
     footerListData.forEach((element) => {
-        const footerListItem = new Component (`footerListItem ${element.id}`,'a');
-        footerListItem.parent = document.getElementById('footerList');
+        const footerListItem = new Component (`footerListItem ${element.id}`,'li');
+        footerListItem.parent = document.getElementById(footerList.id);
         footerListItem.build();
-        footerListItem.addText(element.text);
-        const linkUrl = document.getElementById(`footerListItem ${element.id}`);
-        linkUrl.setAttribute('href', element.href);
+        const footerListLink = new Component (`footerListLink`, 'a');
+        footerListLink.parent = document.getElementById(footerListItem.id);
+        footerListLink.build();
+        footerListLink.addText(element.text);
+        footerListLink.setClass(footerListLink.name);
+        footerListLink.setUrl(element.href);
     });
 
     const copyright = new Component ('copyright', 'div');
-    copyright.parent = document.getElementById('footer');
+    copyright.parent = document.getElementById(footer.id);
     copyright.build();
     copyright.addText(copyrightText);
 };
