@@ -29,4 +29,6 @@ export const renderHeader = () => {
     reserveButton.parent = document.getElementById(header.id);
     reserveButton.build();
     reserveButton.addText('Reserve a table');
+
+    console.log(header);
 };
