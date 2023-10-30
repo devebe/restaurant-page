@@ -1,5 +1,5 @@
 import Component from "./builder";
-import { tabListData, footerListData, restaurantName } from "../data/data";
+import { footerListData, copyrightText } from "../data/data";
 
 export const renderFooter = () => {
     const footer = new Component('footer','div');
@@ -21,5 +21,5 @@ export const renderFooter = () => {
     const copyright = new Component ('copyright', 'div');
     copyright.parent = document.getElementById('footer');
     copyright.build();
-    copyright.addText('© 2023 ' + restaurantName +'. All rights reserved');
+    copyright.addText(copyrightText);
 };
