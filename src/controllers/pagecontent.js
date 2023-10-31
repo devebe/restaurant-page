@@ -1,15 +1,7 @@
-import { renderHeader } from "./header";
-import { renderFooter } from "./footer";
-import { restaurantName } from "../data/common";
 import { tabListData } from "../data/header";
+import { restaurantName } from "../data/common";
 
-export default function buildPage(tabEvent) {
-    renderHeader();
-    renderContent(tabEvent);
-    renderFooter();
-}
-
-const renderContent = (tabEvent) => {
+export const renderContent = (tabEvent) => {
     if (!tabEvent || tabEvent == restaurantName) {
         console.log('One tabevent specified: Homepage is created');
         // renderHomePage()

@@ -1,5 +1,5 @@
 import './style.css';
-import buildPage from './view/pageload';
+import buildPage from './controllers/pageload';
 
 buildPage();
 
