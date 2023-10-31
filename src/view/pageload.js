@@ -14,5 +14,15 @@ const renderContent = (tabEvent) => {
     };
     if (tabEvent == tabListData[0].text) {
         console.log('One tabevent specified: Menu page is created');
+        setBtnToActive(`tabListBtn ${tabListData[0].id}`);
+    };
+    if (tabEvent == tabListData[1].text) {
+        console.log('One tabevent specified: Events page is created');
+        setBtnToActive(`tabListBtn ${tabListData[1].id}`);
     };
 };
+
+const setBtnToActive = (id) => {
+    let target = document.getElementById(id);
+    target.classList.add('active');
+}
