@@ -3,7 +3,7 @@ import { restaurantName } from "../data/common-data";
 import { renderHomePage } from "../view/home-tab";
 
 export const renderContent = (pageName) => {
-    if (!pageName) {
+    if (!pageName || pageName == restaurantName) {
         console.log('One tabevent specified: Homepage is created');
         renderHomePage();
     }
