@@ -1,10 +1,11 @@
 import { tabListData } from "../data/header-data";
 import { restaurantName } from "../data/common-data";
+import { renderHomePage } from "../view/home-tab";
 
 export const renderContent = (tabEvent) => {
     if (!tabEvent || tabEvent == restaurantName) {
         console.log('One tabevent specified: Homepage is created');
-        // renderHomePage()
+        renderHomePage();
     };
     if (tabEvent == tabListData[0].text) {
         console.log('One tabevent specified: Menu page is created');
