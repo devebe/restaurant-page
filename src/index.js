@@ -1,20 +1,22 @@
 import './style.css';
-import buildPage from './controllers/pageload-controller';
+import { buildPage, resetPage } from './controllers/pageload-controller';
+import { restaurantName } from './data/common-data';
+import { tabListData } from './data/header-data';
 
 buildPage();
 
-// let menuPage = document.getElementById('tabListBtn 1');
-// menuPage.addEventListener('click', (e) => {
-//     let content = document.getElementById('content');
-//     content.replaceChildren();
-//     console.log(e);
-//     buildPage('Menu');
-// });
+document.addEventListener('click', (e) => {
+    let list = [];
+    tabListData.forEach((element) => {
+        list.push(element.text);
+    });
 
-// let eventsPage = document.getElementById('tabListBtn 2');
-// eventsPage.addEventListener('click', (e) => {
-//     let content = document.getElementById('content');
-//     content.replaceChildren();
-//     console.log(e);
-//     buildPage('Events');
-// });
+    if (e.target.firstChild.textContent == restaurantName) {
+        resetPage();
+        buildPage(restaurantName);
+    }
+    if (list.includes(e.target.firstChild.textContent)) {
+        resetPage();
+        buildPage(e.target.firstChild.textContent);
+    }
+});

@@ -4,21 +4,21 @@ import { renderHomePage } from "../view/home-tab";
 
 export const renderContent = (pageName) => {
     if (!pageName || pageName == restaurantName) {
-        console.log('One tabevent specified: Homepage is created');
+        // console.log('One tabevent specified: Homepage is created');
         renderHomePage();
     }
     else if (pageName == tabListData[0].text) {
-        console.log('One tabevent specified: Menu page is created');
+        // console.log('One tabevent specified: Menu page is created');
         setBtnToActive(`tabListBtn ${tabListData[0].id}`);
         // renderMenuPage()
     }
     else if (pageName == tabListData[1].text) {
-        console.log('One tabevent specified: Events page is created');
+        // console.log('One tabevent specified: Events page is created');
         setBtnToActive(`tabListBtn ${tabListData[1].id}`);
         // renderEventsPage()
     }
     else if (pageName == tabListData[2].text) {
-        console.log('One tabevent specified: Contact page is created');
+        // console.log('One tabevent specified: Contact page is created');
         setBtnToActive(`tabListBtn ${tabListData[2].id}`);
         // renderContactPage()
     }
