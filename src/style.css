@@ -106,3 +106,18 @@ button.tabListButton.active {
     color:#ffffff;
     transition: 0.3s;
 }
+
+#banner {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #8f896b;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+}
