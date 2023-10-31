@@ -1,5 +1,6 @@
 import Component from "./builder";
-import { tabListData, restaurantName } from "../data/data";
+import { restaurantName } from "../data/common";
+import { tabListData } from "../data/header";
 
 export const renderHeader = () => {
     const header = new Component('header','div');

@@ -1,18 +1,4 @@
-export const restaurantName = 'Restaurant Nacho';
-
-export const tabListData = [];
-tabListData[0] = {
-    id: 1,
-    text: 'Menu',
-};
-tabListData[1] = {
-    id: 2,
-    text: 'Events',
-};
-tabListData[2] = {
-    id: 3,
-    text: 'Contact',
-};
+import { restaurantName } from "./common";
 
 export const footerListData = [];
 footerListData[0] = {
@@ -36,4 +22,4 @@ footerListData[3] = {
     href: '#',
 };
 
-export const copyrightText = '© ' + new Date().getFullYear() + ' ' + restaurantName +'. All rights reserved';
+export const copyrightText = '© ' + new Date().getFullYear() + ' ' + restaurantName +'. All rights reserved.';

@@ -1,5 +1,5 @@
 import Component from "./builder";
-import { footerListData, copyrightText } from "../data/data";
+import { footerListData, copyrightText } from "../data/footer";
 
 export const renderFooter = () => {
     const footer = new Component('footer','div');
@@ -13,7 +13,7 @@ export const renderFooter = () => {
         const footerListItem = new Component (`footerListLink ${element.id}`,'li');
         footerListItem.parent = document.getElementById(footerList.id);
         footerListItem.build();
-        
+
         const footerListLink = new Component (`footerListLink ${element.id}`, 'a');
         footerListLink.parent = document.getElementById(footerListItem.id);
         footerListLink.build();
