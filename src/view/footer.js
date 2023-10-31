@@ -1,5 +1,5 @@
 import Component from "./builder";
-import { footerListData, copyrightText } from "../data/footer";
+import { footerListData, copyrightText } from "../data/footer-data";
 
 export const renderFooter = () => {
     const footer = new Component('footer','div');

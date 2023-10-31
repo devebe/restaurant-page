@@ -1,5 +1,5 @@
-import { tabListData } from "../data/header";
-import { restaurantName } from "../data/common";
+import { tabListData } from "../data/header-data";
+import { restaurantName } from "../data/common-data";
 
 export const renderContent = (tabEvent) => {
     if (!tabEvent || tabEvent == restaurantName) {

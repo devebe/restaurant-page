@@ -1,4 +1,4 @@
-import { restaurantName } from "./common";
+import { restaurantName } from "./common-data";
 
 export const footerListData = [];
 footerListData[0] = {
