@@ -36,4 +36,4 @@ footerListData[3] = {
     href: '#',
 };
 
-export const copyrightText = '© ' + new Date().getFullYear() + ' ' + restaurantName +'. All rights reserved'
+export const copyrightText = '© ' + new Date().getFullYear() + ' ' + restaurantName +'. All rights reserved';

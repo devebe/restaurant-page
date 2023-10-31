@@ -13,13 +13,13 @@ export const renderFooter = () => {
         const footerListItem = new Component (`footerListLink ${element.id}`,'li');
         footerListItem.parent = document.getElementById(footerList.id);
         footerListItem.build();
+        
         const footerListLink = new Component (`footerListLink ${element.id}`, 'a');
         footerListLink.parent = document.getElementById(footerListItem.id);
         footerListLink.build();
         footerListLink.setClass('footerListLink');
         footerListLink.setUrl(element.href);
         footerListLink.addText(element.text);
-        
     });
 
     const copyright = new Component ('copyright', 'div');
