@@ -2,7 +2,7 @@
     font-family: 'Graphik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
-    font-weight: 300;
+    font-weight: 400;
     padding: 0;
     margin: 0;
 }
@@ -135,14 +135,22 @@ button.tabListButton.active {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    background-color: #baa076;
 }
 
 #left, #right {
     padding: 6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #imgStack {
+    height: 400px;
+    width: 400px;
+    border-radius: 200px;
     background-image: url(./farmer.jpeg);
+    align-self: center;
 }
 
 h1 {

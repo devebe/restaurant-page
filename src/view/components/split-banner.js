@@ -1,6 +1,6 @@
 import Component from "./component-class";
 
-export const renderSplitBanner = (position) => {
+export const renderSplitBanner = (position, textarray) => {
     const banner = new Component('splitBanner','div');
     banner.build();
 
@@ -30,20 +30,20 @@ export const renderSplitBanner = (position) => {
     const title = new Component('bannerTitle','h3');
     title.parent = document.getElementById(textStack.id);
     title.build();
-    title.addText('Authentic flavors from farm to table');
+    title.addText(textarray.title);
 
     const subtitle = new Component('bannerSubTitle','h4');
     subtitle.parent = document.getElementById(textStack.id);
     subtitle.build();
-    subtitle.addText('When local produce results in global flavors');
+    subtitle.addText(textarray.subtitle);
 
     const text = new Component('bannerText','p');
     text.parent = document.getElementById(textStack.id);
     text.build();
-    text.addText('The best a man can get');
+    text.addText(textarray.text);
 
     const button = new Component('learnMoreBtn','button');
     button.parent = document.getElementById(textStack.id);
     button.build();
-    button.addText('Learn more');
-}
+    button.addText(textarray.buttonText);
+};
