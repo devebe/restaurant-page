@@ -17,4 +17,9 @@ export const renderHeroBanner = () => {
     heroSubTitle.parent = document.getElementById(bannerTitle.id);
     heroSubTitle.build();
     heroSubTitle.addText('Cajun cooking mixed with Surinamese passion');
+
+    const reserveButton = new Component('reserveBtn','button');
+    reserveButton.parent = document.getElementById(bannerTitle.id);
+    reserveButton.build();
+    reserveButton.addText('Reserve a table');
 }

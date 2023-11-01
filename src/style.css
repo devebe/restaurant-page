@@ -83,7 +83,7 @@ button {
     justify-self: end;
     border: none;
     border-radius: 0.25rem;
-    background-color: #4b4b4b;
+    background-color: #3f3f3f;
     color:#ffffff;
 }
 
@@ -114,16 +114,20 @@ button.tabListButton.active {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    background-image: url(./restaurant-picture.jpeg);
     gap: 1rem;
+    background-image: url(./restaurant-picture.jpeg);
 }
 
 #bannerTitle {
-    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(2px);
+    height: 50%;
     color: #ffffff;
-    background-color: #1b1b1b80;
+    background-image: linear-gradient(#1b1b1b00,#1b1b1b);
     padding: 2rem;
-    text-align: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 h1 {
