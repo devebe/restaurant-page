@@ -10,7 +10,6 @@ document.addEventListener('click', (e) => {
     tabListData.forEach((element) => {
         list.push(element.text);
     });
-
     if (e.target.firstChild.textContent == restaurantName) {
         resetPage();
         buildPage(restaurantName);
@@ -18,5 +17,5 @@ document.addEventListener('click', (e) => {
     if (list.includes(e.target.firstChild.textContent)) {
         resetPage();
         buildPage(e.target.firstChild.textContent);
-    }
+    };
 });

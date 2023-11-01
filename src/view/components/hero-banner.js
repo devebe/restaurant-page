@@ -9,7 +9,7 @@ export const renderHeroBanner = () => {
     heroTitle.build();
     heroTitle.addText('Where Louisiana and The Netherlands meet');
 
-    const heroSubTitle = new Component('heroSubTitle','h3');
+    const heroSubTitle = new Component('heroSubTitle','h2');
     heroSubTitle.parent = document.getElementById(banner.id);
     heroSubTitle.build();
     heroSubTitle.addText('Authentic Cajun cooking mixed with Dutch Design');
