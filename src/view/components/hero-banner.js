@@ -1,10 +1,10 @@
 import Component from "./component-class";
 
 export const renderHeroBanner = () => {
-    const banner = new Component('banner','div');
+    const banner = new Component('heroBanner','div');
     banner.build();
 
-    const bannerTitle = new Component('bannerTitle', 'div');
+    const bannerTitle = new Component('heroBannerTextStack', 'div');
     bannerTitle.parent = document.getElementById(banner.id);
     bannerTitle.build();
 

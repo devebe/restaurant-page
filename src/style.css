@@ -22,6 +22,7 @@
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 #logo {
@@ -109,7 +110,7 @@ button.tabListButton.active {
     transition: 0.3s;
 }
 
-#banner {
+#heroBanner {
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -118,7 +119,7 @@ button.tabListButton.active {
     background-image: url(./restaurant-picture.jpeg);
 }
 
-#bannerTitle {
+#heroBannerTextStack {
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(2px);
@@ -128,6 +129,20 @@ button.tabListButton.active {
     padding: 2rem;
     align-items: center;
     gap: 1rem;
+}
+
+#splitBanner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#left, #right {
+    padding: 6rem 4rem;
+}
+
+#imgStack {
+    background-image: url(./farmer.jpeg);
 }
 
 h1 {
@@ -141,6 +156,13 @@ h1 {
 h2 {
     text-transform: uppercase;
     font-size: 1.25rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 300;
     margin: 0;
 }
