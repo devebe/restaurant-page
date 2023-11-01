@@ -1,8 +1,9 @@
 import { renderHeroBanner } from "./components/hero-banner";
 import { renderSplitBanner } from "./components/split-banner";
-import { homePageSplitBannerData } from "../../data/homepage-split-banner-data";
+import { homePageSplitBanner1, homePageSplitBanner2, heroBanner1 } from "../data/homepage-data";
 
 export const renderHomePage = () => {
-    renderHeroBanner();
-    renderSplitBanner('right',homePageSplitBannerData);
+    renderHeroBanner(heroBanner1);
+    renderSplitBanner('right',homePageSplitBanner1);
+    renderSplitBanner('left',homePageSplitBanner2);
 }

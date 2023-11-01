@@ -1,6 +1,6 @@
 import Component from "./component-class";
 
-export const renderHeroBanner = () => {
+export const renderHeroBanner = (obj) => {
     const banner = new Component('heroBanner','div');
     banner.build();
 
@@ -11,15 +11,15 @@ export const renderHeroBanner = () => {
     const heroTitle = new Component('heroTitle','h1');
     heroTitle.parent = document.getElementById(bannerTitle.id);
     heroTitle.build();
-    heroTitle.addText('Where Louisiana and Deepak meet');
+    heroTitle.addText(obj.title);
 
     const heroSubTitle = new Component('heroSubTitle','h2');
     heroSubTitle.parent = document.getElementById(bannerTitle.id);
     heroSubTitle.build();
-    heroSubTitle.addText('Cajun cooking mixed with Surinamese passion');
+    heroSubTitle.addText(obj.subtitle);
 
     const reserveButton = new Component('reserveBtn','button');
     reserveButton.parent = document.getElementById(bannerTitle.id);
     reserveButton.build();
-    reserveButton.addText('Reserve a table');
+    reserveButton.addText(obj.buttonText);
 }

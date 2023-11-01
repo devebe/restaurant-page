@@ -131,26 +131,40 @@ button.tabListButton.active {
     gap: 1rem;
 }
 
-#splitBanner {
+.splitBanner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     background-color: #baa076;
 }
 
-#left, #right {
+#left1, #right1, #left2, #right2 {
     padding: 6rem 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-#imgStack {
+#imgStack1 {
     height: 400px;
     width: 400px;
     border-radius: 200px;
     background-image: url(./farmer.jpeg);
     align-self: center;
+}
+
+#imgStack2 {
+    height: 400px;
+    width: 400px;
+    border-radius: 200px;
+    background-image: url(./Nacho.jpg);
+    align-self: center;
+    background-size: cover;
+}
+
+#splitBanner2 {
+    background-color: #1b1b1b;
+    color: #f0e7b3;
 }
 
 h1 {

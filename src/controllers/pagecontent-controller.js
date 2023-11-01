@@ -1,6 +1,7 @@
 import { tabListData } from "../data/header-data";
 import { restaurantName } from "../data/common-data";
 import { renderHomePage } from "../view/home-tab";
+import { renderMenuPage } from "../view/menu-tab";
 
 export const renderContent = (pageName) => {
     if (!pageName || pageName == restaurantName) {
@@ -10,7 +11,7 @@ export const renderContent = (pageName) => {
     else if (pageName == tabListData[0].text) {
         // console.log('One tabevent specified: Menu page is created');
         setBtnToActive(`tabListBtn ${tabListData[0].id}`);
-        // renderMenuPage()
+        renderMenuPage();
     }
     else if (pageName == tabListData[1].text) {
         // console.log('One tabevent specified: Events page is created');
